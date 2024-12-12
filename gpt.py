@@ -10,7 +10,6 @@ n_embd = 384
 n_head = 6
 n_layer = 6
 dropout = 0.2
-device = "cuda" if torch.cuda.is_available() else "cpu"
 # --------------
 
 
@@ -120,6 +119,7 @@ class GPTLanguageModel(nn.Module):
 
     def forward(self, idx, targets=None):
         B, T = idx.shape
+        device = idx.device
 
         # idx and targets are both (B,T) tensor of integers
         tok_emb = self.token_embedding_table(idx)  # (B,T,C)
