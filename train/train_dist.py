@@ -3,7 +3,7 @@ import torch.distributed as dist
 from torch.nn.parallel import DistributedDataParallel as DDP
 from torch.utils.data.distributed import DistributedSampler
 from torch.utils.data import Dataset, DataLoader
-from gpt import GPTLanguageModel
+from model.model import GPTLanguageModel
 import wandb
 import os
 import argparse

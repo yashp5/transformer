@@ -1,5 +1,5 @@
 import torch
-from gpt import GPTLanguageModel
+from model.model import GPTLanguageModel
 import wandb
 import os
 from torch.utils.data import Dataset, DataLoader
