@@ -349,7 +349,6 @@ def train(rank, world_size, args):
                             'communication': training_communication_time
                         }
 
-                # Use the new gather_metrics function
                 all_timing_info = gather_metrics(rank, world_size, timing_info)
                 avg_losses = gather_metrics(rank, world_size, avg_loss)
 
